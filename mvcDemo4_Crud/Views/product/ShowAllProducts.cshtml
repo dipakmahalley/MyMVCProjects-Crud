@@ -1,0 +1,76 @@
+﻿@model IEnumerable<mvcDemo4_Crud.Models.product>
+
+@{
+    ViewBag.Title = "ShowAllProducts";
+}
+
+<h2>ShowAllProducts</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddProduct","product")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.product_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.category_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.product_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.video_url)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.product_posted_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.product_image)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.product_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.category_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.product_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.video_url)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.product_posted_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.product_image)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit","product", new { id=item.product_id},null) |
+            @Html.ActionLink("Details", "GetProduct","product", new {  id=item.product_id}, null) |
+            @Html.ActionLink("Delete", "RemoveProduct","product", new {  id=item.product_id },null)
+            
+        </td>
+    </tr>
+}
+
+</table>

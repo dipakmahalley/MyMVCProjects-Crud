@@ -1,0 +1,82 @@
+﻿@model mvcDemo4_Crud.Models.product
+
+@{
+    ViewBag.Title = "GetProduct";
+}
+
+<h2>GetProduct</h2>
+
+<div>
+    <h4>product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.product_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.product_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.category_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.category_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.product_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.product_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.video_url)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.video_url)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.product_posted_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.product_posted_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.product_image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.product_image)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
